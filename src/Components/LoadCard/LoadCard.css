@@ -1,0 +1,8 @@
+.d-style {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-top: 30px;
+    grid-row-gap:24px;
+    grid-column-gap: 24px;
+    
+  }
