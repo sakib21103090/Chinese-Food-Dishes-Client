@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
 
 const Login = () => {
-
+  const [error ,setError]=useState('');
   const{SignIn}=useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
@@ -17,7 +17,7 @@ const Login = () => {
     const email=form.email.value;
     const password=form.password.value;
     console.log(email,password);
-
+    setError('')
 
     
     SignIn(email,password)
@@ -31,6 +31,7 @@ const Login = () => {
       })
       .catch(error => {
         console.log(error);
+        setError('wrong input please input valid data');
         
       });
   
@@ -82,6 +83,7 @@ const Login = () => {
                           <Link to="/Register" className="label-text-alt link link-hover  ml-1"> Sign up </Link>
                         </p>
                       </div>
+                      <p className='text-info text-center	 border fw-bold mt-2'> <small>{error}</small></p>
                     </div>
                   </div>
                 </Card.Body>

@@ -31,7 +31,7 @@ const Register = () => {
           })
           .catch(error => {
             console.log(error);
-            setError(error.message);
+            setError('wrong input please input valid data');
           });
     }
     return (
@@ -88,7 +88,7 @@ const Register = () => {
                           <Link to="/login" className="label-text-alt link link-hover  ml-1"> Login </Link>
                       
                         </p>
-                        <p className='text-danger text-center	'> <small>{error}</small></p>
+                        <p className='text-info text-center	 border fw-bold mt-2'> <small>{error}</small></p>
                       </div>
                     </div>
                   </div>
