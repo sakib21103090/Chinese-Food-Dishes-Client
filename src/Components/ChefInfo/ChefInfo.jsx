@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoaderData, } from 'react-router-dom';
 import Recipes from '../Recipe/Recipes';
-import { Card, Container } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 const ChefInfo = () => {
   const  ChefInfo=useLoaderData();
@@ -12,7 +12,9 @@ const ChefInfo = () => {
   return (
       
     <div>
-          <Container className='d-style' >
+          <Container>
+          <Row>
+            {/* <Col md={4} lg={6} xs={12}> */}
             
           
           {
@@ -24,7 +26,10 @@ const ChefInfo = () => {
              ></Recipes>
              )
           }
+          {/* </Col> */}
+          </Row>
      </Container>
+
     </div>
     );
 };

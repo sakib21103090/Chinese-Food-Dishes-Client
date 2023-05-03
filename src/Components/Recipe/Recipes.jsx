@@ -1,14 +1,14 @@
 import React from 'react';
-import { Button, Card, Row } from 'react-bootstrap';
+import { Button, Card, Col, Row } from 'react-bootstrap';
 
 const Recipes = ({recipe}) => {
 
   const {name,image,details}=recipe;
     console.log(recipe)
     return (
-      <div>
+      <Col  className='mt-4'   md={4}>
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={image} />
+      <Card.Img variant="top"  height ={240} src={image} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
@@ -17,7 +17,7 @@ const Recipes = ({recipe}) => {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
       </Card>
-        </div>
+        </Col>
     );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Container } from 'react-bootstrap';
+import { Button, Card, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ChefData = ({data}) => {
@@ -7,11 +7,11 @@ const ChefData = ({data}) => {
     return (
 
         
-        <Container >
+         <Col className='mt-4'   md={4}>
             <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={picture} />
-      <Card.Body className='bg-light'>
-        <Card.Title className='text-warning fw-bold '>{name}</Card.Title>
+           <Card.Img variant="top" height ={240} src={picture} />
+          <Card.Body className='bg-light'>
+           <Card.Title className='text-warning fw-bold '>{name}</Card.Title>
        
               <div>
               <p className='text-success'> experience : {experience}Year</p> 
@@ -23,7 +23,7 @@ const ChefData = ({data}) => {
               <Link to={`/chefInfo/${id}`}><Button variant="primary">View Recipes</Button></Link>
       </Card.Body>
     </Card>
- </Container>
+ </Col>
 
         
     );

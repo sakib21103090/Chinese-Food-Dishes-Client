@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import ChefData from '../ChefData/ChefData';
-import './LoadCard.css'
 import { Container, Row } from 'react-bootstrap';
 
 const LoadCard = () => {
@@ -16,8 +15,8 @@ const LoadCard = () => {
 
     console.log(LoadCardData);
     return (
-        <Container className='d-style ' >
-            
+        <Container >
+            <Row>
           
              {
                 LoadCardData.map(data=> <ChefData    
@@ -27,6 +26,7 @@ const LoadCard = () => {
                 
                 )
              }
+             </Row>
            
         </Container>
     );

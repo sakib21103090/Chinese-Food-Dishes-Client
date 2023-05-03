@@ -5,9 +5,11 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import {  FaGithub, FaGoogle } from 'react-icons/fa';
 
 
+
 const Login = () => {
   const [error ,setError]=useState('');
   const{SignIn}=useContext(AuthContext);
+  const {googleSignIn}=useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
 
@@ -39,16 +41,17 @@ const Login = () => {
       });
   
   }
-  // const handelGoogleLogin=()=>{
-  //   signInWithPopup(auth,provider)
-  //   .then(result=>{
-  //     const user=result.user;
+  const handelGoogleLogin=(event)=>{
+    event.preventDefault();
+    googleSignIn()
+    .then(result=>{
+      const user=result.user;
       
-  //   })
-  //   .catch(error=>{
-  //     setError('wrong input');
-  //   })
-  // }
+    })
+    .catch(error=>{
+      console.log(error.message);
+    })
+  }
     return (
         <div>
         <Container>
@@ -102,7 +105,7 @@ const Login = () => {
                   <div>
                     <h4 className='border text-success '>Continue With </h4>
                 <ListGroup className='gap-1'>
-                    <ListGroup.Item className='mb-2 text-dark bg-success text-center'> <FaGoogle></FaGoogle> facebook</ListGroup.Item>
+                    <ListGroup.Item className='mb-2 text-dark bg-success text-center'>  <FaGoogle onClick={handelGoogleLogin}></FaGoogle> facebook</ListGroup.Item>
                     <ListGroup.Item className='mb-2 text-dark bg-success text-center'> <FaGithub></FaGithub> twitter </ListGroup.Item>
                 </ListGroup>
                  </div>
