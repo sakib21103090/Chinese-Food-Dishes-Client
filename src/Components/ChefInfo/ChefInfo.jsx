@@ -7,25 +7,25 @@ const ChefInfo = () => {
   const  ChefInfo=useLoaderData();
 
   console.log(ChefInfo);
-  const {id,name,picture,experience,recipes,recipesName}=ChefInfo;
+  const {recipesName}=ChefInfo;
+  console.log(recipesName)
   return (
       
-    <Container >
-    <Card style={{ width: '30rem' }}>
-<Card.Img className='img-fluid h-50'  variant="top" src={picture} />
-<Card.Body className='bg-light'>
-<Card.Title className='text-warning fw-bold '>{name}</Card.Title>
-         {
-                recipesName.map(Info=><Recipes
-                Info={Info}
-                ></Recipes>
-                
-              
-                )
-             }
-     </Card.Body>
-    </Card>
- </Container>
+    <div>
+          <Container className='d-style' >
+            
+          
+          {
+             recipesName.map(recipe=> <Recipes
+             
+             
+            recipe={recipe}
+             
+             ></Recipes>
+             )
+          }
+     </Container>
+    </div>
     );
 };
 

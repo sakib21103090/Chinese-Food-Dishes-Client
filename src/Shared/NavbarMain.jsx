@@ -13,38 +13,43 @@ const NavbarMain = () => {
     }
 
   return (
-           <div>
-            <Navbar collapseOnSelect expand="lg" bg="success" variant="light">
-                <Container>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                      <h4 className="text-dark text-decoration-none normal-case text-xl">Chinese-Food-Dishes</h4>
-                        <Nav className="mx-auto gap-4">
-                            <Link  className="text-dark text-decoration-none normal-case text-xl"  to="/">Home</Link> 
-                            <Link  className="text-dark text-decoration-none normal-case text-xl"  to="/Blog">Blog</Link> 
-                            
-                            
-                            
-                        </Nav>
-                        <Nav className='gap-2'>
-                            {
-                                user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
-                            }
-                            
 
-                            {user ?
-                                <Button onClick={handleLogOut} variant="secondary">Logout</Button> :
-                                <Link to="/login">
-                                    <Button variant="secondary">Login</Button>
-                                </Link>
-                            }
+            <div>
+            <Navbar className='bg-success rounded mt-1 text-white  ' expand="lg">
+            <Container fluid>
+            <Navbar.Brand href="#">  <h1 className='title-color'> Chinese-Food-Dishes</h1></Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse id="navbarScroll">
+            <Nav
+            className="me-auto my-2 my-lg-0 "
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+            >
+          </Nav>
 
-                           
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
+            <Nav className="mx-auto gap-4">
+              <Link  className="text-light fw-bold text-decoration-none normal-case text-xl"  to="/">Home</Link> 
+              <Link  className="text-light fw-bold text-decoration-none normal-case text-xl"  to="/Blog">Blog</Link> 
+             </Nav>
+            <Nav className='gap-2'>
+                                {
+                                    user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
+                                }
+                                
+                                {user ?
+                                    <Button onClick={handleLogOut} variant="secondary">Logout</Button> :
+                                    <Link to="/login">
+                                        <Button variant="secondary">Login</Button>
+                                    </Link>
+                                }
+
+                            </Nav>
+
+            </Navbar.Collapse>
+            </Container>
             </Navbar>
-        </div>
+            </div>
+
   );
 };
 

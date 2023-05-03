@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ChefData from '../ChefData/ChefData';
 import './LoadCard.css'
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 
 const LoadCard = () => {
 
@@ -16,15 +16,18 @@ const LoadCard = () => {
 
     console.log(LoadCardData);
     return (
-        <Container className='d-style' >
+        <Container className='d-style ' >
+            
           
              {
-                LoadCardData.map(data=><ChefData    
+                LoadCardData.map(data=> <ChefData    
                 key={data.id}
                 data={data}
                 ></ChefData>
+                
                 )
              }
+           
         </Container>
     );
 };

@@ -1,21 +1,22 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Button, Card, Row } from 'react-bootstrap';
 
-const Recipes = ({Info}) => {
-    console.log(Info)
+const Recipes = ({recipe}) => {
+
+  const {name,image,details}=recipe;
+    console.log(recipe)
     return (
-        <div>
-             <Table striped bordered hover variant="light">
-      
-      <tbody>
-        <tr>
-          {Info}
-         
-        </tr>
-       
-    
-      </tbody>
-    </Table>
+      <div>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={image} />
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>
+        <h5>{details}</h5>
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+      </Card>
         </div>
     );
 };
