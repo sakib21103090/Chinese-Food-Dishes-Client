@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData, } from 'react-router-dom';
 import Recipes from '../Recipe/Recipes';
+import { Card, Container } from 'react-bootstrap';
 
 const ChefInfo = () => {
   const  ChefInfo=useLoaderData();
@@ -8,10 +9,12 @@ const ChefInfo = () => {
   console.log(ChefInfo);
   const {id,name,picture,experience,recipes,recipesName}=ChefInfo;
   return (
-      <div className='card'>
-
-
-        <p>{name}</p>
+      
+    <Container >
+    <Card style={{ width: '30rem' }}>
+<Card.Img className='img-fluid h-50'  variant="top" src={picture} />
+<Card.Body className='bg-light'>
+<Card.Title className='text-warning fw-bold '>{name}</Card.Title>
          {
                 recipesName.map(Info=><Recipes
                 Info={Info}
@@ -20,7 +23,9 @@ const ChefInfo = () => {
               
                 )
              }
-      </div>
+     </Card.Body>
+    </Card>
+ </Container>
     );
 };
 

@@ -1,13 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
+import { Col, Button, Row, Container, Card, Form, ListGroup } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
+import {  FaGithub, FaGoogle } from 'react-icons/fa';
+
 
 const Login = () => {
   const [error ,setError]=useState('');
   const{SignIn}=useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
+
 
   const from =location.state?.from?.pathname || '/';
 
@@ -36,6 +39,16 @@ const Login = () => {
       });
   
   }
+  // const handelGoogleLogin=()=>{
+  //   signInWithPopup(auth,provider)
+  //   .then(result=>{
+  //     const user=result.user;
+      
+  //   })
+  //   .catch(error=>{
+  //     setError('wrong input');
+  //   })
+  // }
     return (
         <div>
         <Container>
@@ -86,10 +99,18 @@ const Login = () => {
                       <p className='text-info text-center	 border fw-bold mt-2'> <small>{error}</small></p>
                     </div>
                   </div>
+                  <div>
+                    <h4 className='border text-success '>Continue With </h4>
+                <ListGroup className='gap-1'>
+                    <ListGroup.Item className='mb-2 text-dark bg-success text-center'> <FaGoogle></FaGoogle> facebook</ListGroup.Item>
+                    <ListGroup.Item className='mb-2 text-dark bg-success text-center'> <FaGithub></FaGithub> twitter </ListGroup.Item>
+                </ListGroup>
+                 </div>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
+        
         </Container>
       </div>
     );
