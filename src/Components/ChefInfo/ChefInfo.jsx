@@ -2,13 +2,13 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const ChefInfo = () => {
-    const  ChefInfo=useLoaderData();
+    const  chefInfo=useLoaderData();
 
-    const {id,name}=ChefInfo;
-    console.log(ChefInfo);
+    const {id,name}=chefInfo;
+    console.log(chefInfo);
     return (
         <div>
-          <h5>{name} Name</h5>
+          <h5>{name}Name</h5>
         </div>
     );
 };

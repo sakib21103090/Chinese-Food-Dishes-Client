@@ -19,15 +19,10 @@ const LoadCard = () => {
         <Container className='d-style' >
           
              {
-           
-              
-                LoadCardData.map(data=><ChefData
-
-                    
+                LoadCardData.map(data=><ChefData    
                 key={data.id}
                 data={data}
                 ></ChefData>
-               
                 )
              }
         </Container>
