@@ -2,9 +2,15 @@ import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
+import { FaUserCircle } from 'react-icons/fa';
 
 const NavbarMain = () => {
-    const {user}=useContext(AuthContext)
+    const {user,logOut}=useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error));
+    }
 
   return (
            <div>
@@ -16,24 +22,24 @@ const NavbarMain = () => {
                         <Nav className="mx-auto gap-4">
                             <Link  className="text-dark text-decoration-none normal-case text-xl"  to="/">Home</Link> 
                             <Link  className="text-dark text-decoration-none normal-case text-xl"  to="/Blog">Blog</Link> 
-                            {/* <Link  className="text-dark text-decoration-none normal-case text-xl"  to="/ViewRecipe">ViewRecipe</Link>  */}
+                            
                             
                             
                         </Nav>
                         <Nav className='gap-2'>
-                            {/* {
+                            {
                                 user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
-                            } */}
-                             <Link to="/Register">
-                                    <Button variant="secondary">Register</Button>
-                                </Link>
+                            }
+                            
 
-                            {/* {user ? */}
-                                <Button variant="secondary">Logout</Button> 
+                            {user ?
+                                <Button onClick={handleLogOut} variant="secondary">Logout</Button> :
                                 <Link to="/login">
                                     <Button variant="secondary">Login</Button>
                                 </Link>
-                            {/* } */}
+                            }
+
+                           
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

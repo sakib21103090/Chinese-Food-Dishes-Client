@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Login = () => {
+
+  const{SignIn}=useContext(AuthContext);
+  const navigate=useNavigate();
+  const location=useLocation();
+
+  const from =location.state?.from?.pathname || '/';
+
+  const HandelLogin=event=>{
+    event.preventDefault();
+    const form =event.target;
+    const email=form.email.value;
+    const password=form.password.value;
+    console.log(email,password);
+
+
+    
+    SignIn(email,password)
+    .then(result => {
+    
+        const LoggedUser = result.user;
+        console.log(LoggedUser);
+        form.reset();
+        navigate(from,{replace :true});
+       
+      })
+      .catch(error => {
+        console.log(error);
+        
+      });
+  
+  }
     return (
         <div>
         <Container>
@@ -13,7 +45,7 @@ const Login = () => {
                   <div className="mb-3 mt-md-4">
                     <h2 className="fw-bold mb-2 text-uppercase text-center ">Login please</h2>
                     <div className="mb-3">
-                      <Form>
+                      <Form onSubmit={HandelLogin}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                           <Form.Label className="text-center">
                             Email address

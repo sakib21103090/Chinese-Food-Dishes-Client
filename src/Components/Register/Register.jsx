@@ -26,8 +26,8 @@ const Register = () => {
         createUser(email,password)
         .then(result => {
         
-            const LoggedUser = result.user;
-            console.log(LoggedUser);
+            const createdUser = result.user;
+            console.log(createdUser);
           })
           .catch(error => {
             console.log(error);
@@ -85,10 +85,10 @@ const Register = () => {
                       <div className="mt-3">
                         <p className="mb-0  text-center">
                           Already have an account??{' '}
-                          <Link to="/login" className="label-text-alt link link-hover  ml-1"> Sign up </Link>
+                          <Link to="/login" className="label-text-alt link link-hover  ml-1"> Login </Link>
                       
                         </p>
-                        <p className='text-danger text-center	'> <small>{error}</small></p>p
+                        <p className='text-danger text-center	'> <small>{error}</small></p>
                       </div>
                     </div>
                   </div>
