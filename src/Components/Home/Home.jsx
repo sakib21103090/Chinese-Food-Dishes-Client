@@ -3,6 +3,7 @@ import banner from '../../assets/banner.png'
 import Marquee from "react-fast-marquee";
 import Footer from '../../Shared/Footer';
 import LoadCard from '../LoadCard/LoadCard';
+import Extra from '../Extra/Extra';
 
 
 
@@ -26,6 +27,9 @@ const Home = () => {
               
               <div>
               <LoadCard></LoadCard>
+              </div>
+              <div>
+                <Extra></Extra>
               </div>
             <div>
                <Footer></Footer>

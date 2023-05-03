@@ -33,7 +33,7 @@ const NavbarMain = () => {
              </Nav>
             <Nav className='gap-2'>
                                 {
-                                    user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
+                                user && <img className='rounded-circle' style={{height :'35px'}} src={`https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80`} alt="" />
                                 }
                                 
                                 {user ?

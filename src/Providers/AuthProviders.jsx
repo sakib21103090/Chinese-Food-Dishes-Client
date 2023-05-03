@@ -15,9 +15,9 @@ const createUser=(email,password)=>{
     return createUserWithEmailAndPassword(auth,email,password);
 }
 
- const googleSignIn=(provider)=>{
-    return signInWithPopup(auth,provider);
- }
+//  const googleSignIn=(provider)=>{
+//     return signInWithPopup(auth,provider);
+//  }
 
 const SignIn=(email,password)=>{
     setLoading(true);
@@ -48,8 +48,8 @@ useEffect(()=>{
         loading,
         createUser,
         SignIn,
-        logOut,
-        googleSignIn
+        logOut
+       
        
     }
     return (

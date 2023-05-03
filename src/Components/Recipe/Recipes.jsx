@@ -1,7 +1,10 @@
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Recipes = ({recipe}) => {
+  const notify = () => toast("Add to favorite");
 
   const {name,image,details}=recipe;
     console.log(recipe)
@@ -14,7 +17,8 @@ const Recipes = ({recipe}) => {
         <Card.Text>
         <h5>{details}</h5>
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary" onClick={notify}>Favorite</Button>
+        <ToastContainer />
       </Card.Body>
       </Card>
         </Col>
