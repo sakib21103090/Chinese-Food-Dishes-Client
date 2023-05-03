@@ -1,15 +1,15 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, } from 'react-router-dom';
 
 const ChefInfo = () => {
-    const  chefInfo=useLoaderData();
+  const  ChefInfo=useLoaderData();
 
-    const {id,name}=chefInfo;
-    console.log(chefInfo);
-    return (
-        <div>
-          <h5>{name}Name</h5>
-        </div>
+  const {name}=ChefInfo;
+  console.log(ChefInfo);
+  return (
+      <div>
+        <h5>{name} Name</h5>
+      </div>
     );
 };
 

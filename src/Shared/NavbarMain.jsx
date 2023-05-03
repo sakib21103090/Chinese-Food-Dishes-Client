@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProviders';
 
 const NavbarMain = () => {
+    const {user}=useContext(AuthContext)
+
   return (
            <div>
             <Navbar collapseOnSelect expand="lg" bg="success" variant="light">

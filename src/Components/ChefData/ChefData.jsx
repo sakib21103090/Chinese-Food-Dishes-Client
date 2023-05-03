@@ -19,7 +19,8 @@ const ChefData = ({data}) => {
               <p className='text-success'>likes :{likes}</p>
               </div>
         
-          <Link to={`/chefInfo/${id}`}><Button variant="primary">View Recipes</Button></Link>
+          
+              <Link to={`/chefInfo/${id}`}><Button variant="primary">View Recipes</Button></Link>
       </Card.Body>
     </Card>
  </Container>
