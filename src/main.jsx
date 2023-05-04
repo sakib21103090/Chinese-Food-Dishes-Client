@@ -14,12 +14,15 @@ import Blog from './Components/Blog/Blog.jsx';
 import ChefInfo from './Components/ChefInfo/ChefInfo.jsx';
 import AuthProviders from './Providers/AuthProviders.jsx';
 import PrivateRoute from './Components/Route/PrivateRoute.jsx';
+import Error from './Components/Error/Error.jsx';
+
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Main></Main>,
+    errorElement:<Error></Error>,
     children :[
 
 
@@ -47,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: "/chefInfo/:id",
         element:<PrivateRoute><ChefInfo></ChefInfo></PrivateRoute>,
-        loader :({params})=>fetch(`http://localhost:5000/chefInfo/${params.id}`)
+        loader :({params})=>fetch(`https://chinese-food-dishes-server-sakib21103090.vercel.app/chefInfo/${params.id}`)
 
       }
     ]

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, NavLink, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
-import { FaUserCircle } from 'react-icons/fa';
+
 
 const NavbarMain = () => {
     const {user,logOut}=useContext(AuthContext);
@@ -33,16 +33,16 @@ const NavbarMain = () => {
              </Nav>
             <Nav className='gap-2'>
                                 {
-                                user && <img className='rounded-circle' style={{height :'35px'}} src={`https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80`} alt="" />
+                                user && <img className='rounded-circle' style={{height :'35px'}} src={`https://i.ibb.co/7tWbS0w/IMG-8900.jpg`} alt="" />
                                 }
                                 
                                 {user ?
-                                    <Button onClick={handleLogOut} variant="secondary">Logout</Button> :
+                                    <Button onClick={handleLogOut} variant="info">Logout</Button> :
                                     <Link to="/login">
-                                        <Button variant="secondary">Login</Button>
+                                        <Button variant="info">Login</Button>
                                     </Link>
                                 }
-
+ 
                             </Nav>
 
             </Navbar.Collapse>

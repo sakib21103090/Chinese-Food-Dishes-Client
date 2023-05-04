@@ -8,7 +8,7 @@ const LoadCard = () => {
     const [LoadCardData, setLoadCardData] = useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:5000/chefInfo")
+      fetch("https://chinese-food-dishes-server-sakib21103090.vercel.app/chefInfo")
         .then((response) => response.json())
         .then((data) => setLoadCardData(data));
     }, []);
