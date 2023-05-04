@@ -14,7 +14,7 @@ const ChefInfo = () => {
     <div>
           <Container>
           <Row>
-            {/* <Col md={4} lg={6} xs={12}> */}
+          
             
           
           {

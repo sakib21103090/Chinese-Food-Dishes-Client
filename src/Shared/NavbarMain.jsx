@@ -28,7 +28,7 @@ const NavbarMain = () => {
           </Nav>
 
             <Nav className="mx-auto gap-4">
-              <Link  className="text-light fw-bold text-decoration-none normal-case text-xl"  to="/">Home</Link> 
+              <Link  className="text-light fw-bold text-decoration-none normal-case text-xl" to="/">Home</Link> 
               <Link  className="text-light fw-bold text-decoration-none normal-case text-xl"  to="/Blog">Blog</Link> 
              </Nav>
             <Nav className='gap-2'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card, Col, Row, Table } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,6 +8,7 @@ import '@smastrom/react-rating/style.css'
 
 const Recipes = ({recipe}) => {
   const notify = () => toast("Add to favorite");
+
 
   const {name,image,rating,cookingMethod,ingredients}=recipe;
     console.log(recipe)
