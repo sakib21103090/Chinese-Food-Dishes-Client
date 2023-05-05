@@ -15,7 +15,7 @@ const LoadCard = () => {
 
     console.log(LoadCardData);
     return (
-        <Container >
+        <Container className='Bcc mt-4 rounded' >
             <Row>
           
              {

@@ -7,20 +7,20 @@ const ChefData = ({data}) => {
     return (
 
         
-         <Col className='mt-4'   md={4}>
+         <Col className='mt-4  mb-4 Bcc'   md={4}>
             <Card style={{ width: '18rem' }}>
            <Card.Img variant="top" height ={240} src={picture} />
-          <Card.Body className='bg-light'>
+          <Card.Body className='Bc'>
            <Card.Title className='text-warning fw-bold '>{name}</Card.Title>
        
               <div>
-              <p className='text-success'> experience : {experience}Year</p> 
-               <p className='text-success'>recipes :{recipes}</p>
-              <p className='text-success'>likes :{likes}</p>
+              <p className='Text3'> experience : {experience}Year</p> 
+               <p className='Text3'>recipes :{recipes}</p>
+              <p className='Text3'>likes :{likes}</p>
               </div>
         
           
-              <Link to={`/chefInfo/${id}`}><Button variant="primary">View Recipes</Button></Link>
+              <Link to={`/chefInfo/${id}`}><Button className='Bcn'>View Recipes</Button></Link>
       </Card.Body>
     </Card>
  </Col>

@@ -1,0 +1,43 @@
+.Pink{
+    background-color: rgb(243, 186, 229);
+}
+.Green{
+    background: #75ca81;
+}
+.BlueV{
+ background-color: rgb(83, 10, 151);
+}
+.Red{
+    background-color: rgb(177, 5, 5);
+}
+.Back{
+    background-color: cornsilk;
+}
+.Bcn{
+    background-color: rgb(214, 194, 12);
+}
+.Bc{
+    background-color: rgb(167, 236, 146);
+}
+.Bcc{
+    background-color: #f0facc;
+}
+
+.Text1{
+ color: rgb(141, 55, 122);
+}
+.Text2{
+    color: #8df883;
+}
+.Text3{
+    color: rgb(20, 95, 95);
+}
+.TG{
+    color: rgb(82, 70, 253);
+}
+
+.User{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}

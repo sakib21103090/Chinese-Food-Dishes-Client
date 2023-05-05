@@ -13,14 +13,14 @@ const Recipes = ({recipe}) => {
   const {name,image,rating,cookingMethod,ingredients}=recipe;
     console.log(recipe)
     return (
-      <Col  className='mt-4'   md={4}>
+      <Col  className='mt-4 Bcc'   md={4}>
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top"  height ={240} src={image} />
-      <Card.Body>
+      <Card.Body className='Bc'>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
           
-          <Table striped bordered hover size="sm">
+          <Table striped bordered hover size="sm" className='Pink'>
           <thead>
           <tr>
           <th>ingredients</th>
@@ -32,7 +32,7 @@ const Recipes = ({recipe}) => {
          </tr>
       </tbody>
     </Table>
-          <Table striped bordered hover size="sm">
+          <Table striped bordered hover size="sm" className='Pink'>
           <thead>
           <tr>
           <th>cookingMethod</th>
@@ -50,7 +50,7 @@ const Recipes = ({recipe}) => {
         <span className='ms-2'>{rating}</span>
         </div>
         </Card.Text>
-        <Button variant="primary" onClick={notify}>Favorite</Button>
+        <Button className='Bcn' onClick={notify}>Favorite</Button>
         <ToastContainer />
       </Card.Body>
       </Card>

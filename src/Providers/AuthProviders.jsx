@@ -24,6 +24,10 @@ const SignIn=(email,password)=>{
     return signInWithEmailAndPassword(auth,email,password);
 }
 
+const profileUpdate=(displayName,photoURL)=>{
+    return updateProfile(auth.currentUser,{displayName,photoURL})
+}
+
 const logOut=()=>{
     setLoading(true);
     return signOut(auth);
@@ -48,7 +52,8 @@ useEffect(()=>{
         loading,
         createUser,
         SignIn,
-        logOut
+        logOut,
+        profileUpdate
        
        
     }

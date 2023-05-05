@@ -12,7 +12,7 @@ const ChefInfo = () => {
   return (
       
     <div>
-          <Container>
+          <Container className='Bcc mt-4 rounded'>
           <Row>
           
             

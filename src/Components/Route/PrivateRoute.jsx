@@ -10,7 +10,7 @@ const PrivateRoute = ({children}) => {
     if(loading){
         return   <div>
         <LazyLoad height={762}>
-          <h5>wait Page is loading..........</h5>
+        <img src='https://i.ibb.co/kckxT4q/download-10.jpg' />
         </LazyLoad>
       </div>
     }

@@ -37,9 +37,9 @@ const Register = () => {
     return (
         <div>
         <Container>
-          <Row className="vh-100 d-flex justify-content-center align-items-center">
+          <Row className="vh-100 d-flex justify-content-center align-items-center mt-4">
             <Col md={8} lg={6} xs={12}>
-              <Card className="px-4">
+              <Card className="px-4 shadow Bcc">
                 <Card.Body>
                   <div className="mb-3 mt-md-4">
                     <h2 className="fw-bold mb-2 text-center text-uppercase ">
@@ -77,7 +77,7 @@ const Register = () => {
                         
                         </Form.Group>
                         <div className="d-grid">
-                          <Button variant="primary" type="submit">
+                          <Button className='Bcn' type="submit">
                             Create Account
                           </Button>
                         </div>
@@ -88,10 +88,11 @@ const Register = () => {
                           <Link to="/login" className="label-text-alt link link-hover  ml-1"> Login </Link>
                       
                         </p>
-                        <p className='text-info text-center	 border fw-bold mt-2'> <small>{error}</small></p>
+                        <p className='text-danger text-center	 border fw-bold mt-2'> <small>{error}</small></p>
                       </div>
                     </div>
                   </div>
+                  
                 </Card.Body>
               </Card>
             </Col>

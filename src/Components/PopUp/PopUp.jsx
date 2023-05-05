@@ -44,8 +44,8 @@ const PopUp = () => {
     return (
         <div>
              <ListGroup className='gap-1'>
-                    <ListGroup.Item className='mb-2 text-dark bg-success text-center' onClick={handelGoogleLogin}>  <FaGoogle ></FaGoogle> Google</ListGroup.Item>
-                    <ListGroup.Item className='mb-2 text-dark bg-success text-center'  onClick={handelGitHubLogin}> <FaGithub></FaGithub> GitHub </ListGroup.Item>
+                    <ListGroup.Item className='mb-2 TG Bc text-center' onClick={handelGoogleLogin}>  <FaGoogle ></FaGoogle> Google</ListGroup.Item>
+                    <ListGroup.Item className='mb-2 text-dark Bc text-center'  onClick={handelGitHubLogin}> <FaGithub></FaGithub> GitHub </ListGroup.Item>
                 </ListGroup>
         </div>
     );

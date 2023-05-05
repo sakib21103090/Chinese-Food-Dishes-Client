@@ -44,11 +44,11 @@ const Login = () => {
     return (
         <div>
         <Container>
-          <Row className="vh-100 d-flex justify-content-center align-items-center">
+          <Row className="vh-100 d-flex justify-content-center align-items-center ">
             <Col md={8} lg={6} xs={12}>
-              <Card className="shadow">
+              <Card className="shadow Bcc">
                 <Card.Body>
-                  <div className="mb-3 mt-md-4">
+                  <div className="mb-3 mt-md-4 Text3">
                     <h2 className="fw-bold mb-2 text-uppercase text-center ">Login please</h2>
                     <div className="mb-3">
                       <Form onSubmit={HandelLogin}>
@@ -71,13 +71,13 @@ const Login = () => {
                           controlId="formBasicCheckbox"
                         >
                           <p className="small">
-                            <a className="text-primary" href="#!">
+                            <a className="text-dark" href="#!">
                               Forgot password?
                             </a>
                           </p>
                         </Form.Group>
                         <div className="d-grid">
-                          <Button variant="primary" type="submit">
+                          <Button className='Bcn text-2' type="submit">
                             Login
                           </Button>
                         </div>
@@ -88,7 +88,7 @@ const Login = () => {
                           <Link to="/Register" className="label-text-alt link link-hover  ml-1"> Sign up </Link>
                         </p>
                       </div>
-                      <p className='text-info text-center	 border fw-bold mt-2'> <small>{error}</small></p>
+                      <p className='text-danger text-center	 border fw-bold mt-2'> <small>{error}</small></p>
                     </div>
                   </div>
                   <div>

@@ -4,11 +4,21 @@ import Marquee from "react-fast-marquee";
 import Footer from '../../Shared/Footer';
 import LoadCard from '../LoadCard/LoadCard';
 import Extra from '../Extra/Extra';
+import { Spinner } from 'react-bootstrap';
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 
 
 
 const Home = () => {
+  const {loading} = useContext(AuthContext);
+  
+  if(loading){
+    return   <div>
+    <Spinner animation="border" variant="success" />
+  </div>
+}
     return (
         <div>
             <div>
